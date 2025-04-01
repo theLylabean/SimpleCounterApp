@@ -1,12 +1,20 @@
-# React + Vite
+🧪 Beginner Practice Prompt: Simple Counter App
+📝 Description:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create a React component called <Counter /> that:
 
-Currently, two official plugins are available:
+Displays a number starting at 0
+Has a “+” button to increase the count
+Has a “-” button to decrease the count
+Has a “Reset” button that sets the count back to 0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧠 Goals:
+Practice using useState
+Handle button click events
+Update and display state in the UI
+Write clean, simple JSX
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Stretch Challenges (Optional):
+Don’t allow the count to go below 0
+Add a message when the count reaches 10: “Nice! You reached 10!”
+Use useEffect to log to the console every time the count changes
