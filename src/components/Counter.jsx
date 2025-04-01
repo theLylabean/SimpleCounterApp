@@ -30,6 +30,9 @@ function Counter() {
         {/* setCount(count > 0 ? count - 1 : 0) */}
         <button 
           onClick={() => {
+              if (count === 0) {
+                  alert("Sorry! The limit does not exist!");
+                } else {
             const subtractCount = count - 1;
             if (subtractCount === 0) {
               alert(`You have reached ${subtractCount}. DO NOT PASS GO. DO NOT COLLECT 32 CREDITS.`);
@@ -37,10 +40,18 @@ function Counter() {
             } else {
               setCount(count > 0 ? subtractCount : 0);
             }
+          }
         }}>
           Subtract 1
         </button>
-        <button onClick={() => setCount(0)}>
+        <button 
+          onClick={() => {
+            if (count === 0) {
+                alert("Haven't I been reset enough already?")
+            } else {
+            setCount(0)
+          }
+        }}>
           Reset
         </button>
       </div>
