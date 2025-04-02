@@ -8,7 +8,7 @@ function FavouriteCharacter ({ favCharacter, setFavCharacter }){
         <p>{favCharacter.name}</p>
         <p>{favCharacter.homeworld}</p>
         <p>{favCharacter.species}</p>
-        <button
+        <button id='setFav'
         onClick={() => setFavCharacter(null)}
         >
             Remove Favourite
