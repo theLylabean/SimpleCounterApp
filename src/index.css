@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Century Gothic", sans-serif;
+  background-color: lightgrey;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#count {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+}
+
+button {
+  padding: 3px;
+  margin: 3px;
+  height: 30px;
+  width: 117px;
+  border-radius: 17px;
+  border: 1px solid black;
+  font-size: 17px;
+  font-weight: 700;
+  color: black;
+  background: lightcoral;
+}
+
+button:active {
+  transform: scale(0.90);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#alert {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
