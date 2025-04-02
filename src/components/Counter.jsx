@@ -1,28 +1,12 @@
-import { useEffect, useState } from 'react'
-
-function Counter({alert, setAlert}) {
-const messages = [
-        "Hello, React props!",
-        "Props make components reusable!",
-        "React is awesome!",
-        "You're learning fast!",
-        "Keep clicking for more messages!",
-      ];
-  const [count, setCount] = useState(0);
-
-
-  useEffect(() => {
-    console.log('Count:', count);
-  }, [count]);
-
-  useEffect(() => {
-    if (alert) {
-        const timeout = setTimeout(() => {
-            setAlert('');
-        }, 3000);
-        return () => clearTimeout(timeout);
-    }
-  }, [alert]);
+function Counter({ count, setCount, alert, setAlert }) {
+  // -----Class Demo Code-----
+  // const messages = [
+  //         "Hello, React props!",
+  //         "Props make components reusable!",
+  //         "React is awesome!",
+  //         "You're learning fast!",
+  //         "Keep clicking for more messages!",
+  //       ];
 
   return (
     <>
@@ -35,13 +19,13 @@ const messages = [
         <button 
           onClick={() => {
             const addCount = count + 1;
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            // -----Class Code-----
+            // const randomMessage = messages[Math.floor(Math.random() * messages.length)];
             if (addCount === 10) {
-                setAlert(randomMessage);
+                setAlert('Yay! You reached 10!');
                 setCount(0);
             } else {
                 setCount(addCount);
-                setAlert('');
             }
           }}
           disabled={!!alert}
@@ -55,13 +39,12 @@ const messages = [
         setAlert("Sorry! The limit does not exist!");
     } else {
     const subtractCount = count - 1;
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    // const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     if (subtractCount === 0) {
-        setAlert(randomMessage);
+        setAlert('You have reached 0! DO NOT PASS GO. DO NOT COLLECT 32 CREDITS.');
         setCount(0);
     } else {
         setCount(count > 0 ? subtractCount : 0);
-        setAlert('');
     }}
   }}
   disabled={!!alert}
@@ -70,12 +53,11 @@ const messages = [
 </button>
 <button 
   onClick={() => {
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    // const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     if (count === 0) {
-        setAlert(randomMessage);
+        setAlert("Haven't I been reset enough already?");
     } else {
         setCount(0);
-        setAlert(randomMessage);
     }
   }}
   disabled={!!alert}
@@ -83,7 +65,7 @@ const messages = [
   Reset
 </button>
 </div>
-<p>{alert && (
+{/* {alert && (
   <div id='alert' style={{
       position: 'fixed',
       bottom: '20px',
@@ -100,7 +82,7 @@ const messages = [
   }}>
       {alert}
   </div>
-)}</p>
+)} */}
     </>
   )
 }
